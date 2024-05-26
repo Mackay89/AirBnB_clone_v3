@@ -79,7 +79,7 @@ class DBStorage:
         """
         Retrieve on object by the ID.
         """
-        objects = self.__session.query.cls).filter_by(id=id).all()
+        objects = self.__session.query(cls).filter_by(id=id).all()
         return objects[0] if objects else None
 
     def count(self, cls=None):
